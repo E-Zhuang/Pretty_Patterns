@@ -40,6 +40,8 @@ int main()
     
     putchar('\n');
     
+    printf("Press enter to print next pretty pattern.\n");
+    getchar();
     
     //  II. Print star pattern that is left aligned with point on bottom
     //      a.  Use a nested for loop,
@@ -56,6 +58,9 @@ int main()
     }
     
     putchar('\n');
+    
+    printf("Press enter to print next pretty pattern.\n");
+    getchar();
     
     //  III. Print star pattern that is right aligned with point on bottom
     //      a.  Use a nested for loop,
@@ -80,6 +85,9 @@ int main()
     
     putchar('\n');
     
+    printf("Press enter to print next pretty pattern.\n");
+    getchar();
+    
     //  IV. Print star pattern that is right aligned with point on top
     //      a.  Use a nested for loop,
     //          Outer loop counts up from one through ten each time and prints a new line after the inner loop
@@ -101,6 +109,8 @@ int main()
     }
     
     putchar('\n');
+    
+    printf("That was the last pretty pattern.\n");
     
     return 0;
 }

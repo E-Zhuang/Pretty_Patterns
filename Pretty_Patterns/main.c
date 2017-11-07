@@ -7,9 +7,8 @@
 //
 
 
-//  1. Integer bound for stars (bound for inner loop)
-//     Integer bound for spaces (bound for inner loop)
-//     Integer counter for inner loop
+//  1. Integer counter for stars (counter for inner loop)
+//     Integer counter for spaces (counter for inner loop)
 //     Integer counter for outer loop
 
 
@@ -19,9 +18,8 @@
 int main()
 {
     //2. Declare variables
-    int stars;
     int spaces;
-    int k;
+    int stars;
     int outer;
     
     //3.
@@ -33,7 +31,7 @@ int main()
     //      b.  Increment both counters
     for(outer = 1; outer <= 10; outer++)
     {
-        for(k = 1; k <= outer; k++)
+        for(stars = 1; stars <= outer; stars++)
         {
             putchar('*');
         }
@@ -50,7 +48,7 @@ int main()
     //      b.  Increment outer counter, decrement inner counter
     for(outer = 1; outer <= 10; outer++)
     {
-        for(k = 1; k <= outer; k++)
+        for(stars = 1; stars <= 11 - outer; stars++)
         {
             putchar('*');
         }
@@ -68,12 +66,12 @@ int main()
     
     for(outer = 1; outer <= 10; outer++)
     {
-        for(spaces = 0; spaces < 10; spaces++)
+        for(spaces = 1; spaces < outer; spaces++)
         {
             putchar(' ');
         }
         
-        for(stars = 10; stars >= 1; stars--)
+        for(stars = 1; stars <= 11 - outer; stars++)
         {
             putchar('*');
         }
@@ -91,12 +89,12 @@ int main()
     //          Increment stars by one
     for(outer = 1; outer <= 10; outer++)
     {
-        for(spaces = 9; spaces >= 0; spaces--)
+        for(spaces = 1; spaces < outer; spaces++)
         {
             putchar(' ');
         }
         
-        for(stars = 1; stars >= 10; stars++)
+        for(stars = 1; stars <= 11 - outer; stars++)
         {
             putchar('*');
         }

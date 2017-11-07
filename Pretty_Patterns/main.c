@@ -27,7 +27,7 @@ int main()
     //      4.
     //      a.  Use a nested for loop,
     //          Outer loop counts up from one through ten each time and prints a new line after the inner loop
-    //          Inner loop counts up to stars and prints the number of stars
+    //          Inner loop counts up from one until outer and prints the number of stars
     //      b.  Increment both counters
     for(outer = 1; outer <= 10; outer++)
     {
@@ -44,8 +44,8 @@ int main()
     //  II. Print star pattern that is left aligned with point on bottom
     //      a.  Use a nested for loop,
     //          Outer loop counts up from one through ten each time and prints a new line after the inner loop
-    //          Inner loop counts down from stars through one and prints the number of stars
-    //      b.  Increment outer counter, decrement inner counter
+    //          Inner loop counts up from 1 until stars equals 11 - outer and print respective stars
+    //      b.  Increment both counters
     for(outer = 1; outer <= 10; outer++)
     {
         for(stars = 1; stars <= 11 - outer; stars++)
@@ -54,15 +54,15 @@ int main()
         }
         putchar('\n');
     }
+    
+    putchar('\n');
     
     //  III. Print star pattern that is right aligned with point on bottom
     //      a.  Use a nested for loop,
     //          Outer loop counts up from one through ten each time and prints a new line after the inner loop
-    //          First inner loop counts up to spaces and prints the number of spaces
-    //          Second inner loop counts from stars down through one and prints the number of stars
-    //      b.  Increment outer counter
-    //          Increment spaces by one
-    //          Decrement stars by one
+    //          First inner loop up from one until spaces equals outer - 1
+    //          Second inner loop counts up from one until stars equals 11 - outer
+    //      b.  Print a star or space in each inner loop
     
     for(outer = 1; outer <= 10; outer++)
     {
@@ -78,27 +78,29 @@ int main()
         putchar('\n');
     }
     
+    putchar('\n');
     
     //  IV. Print star pattern that is right aligned with point on top
     //      a.  Use a nested for loop,
     //          Outer loop counts up from one through ten each time and prints a new line after the inner loop
-    //          First inner loop counts down from spaces through one and prints the number of spaces
-    //          Second inner loop counts up to stars and prints the number of stars
-    //      b.  Increment outer counter
-    //          Decrement spaces by one
-    //          Increment stars by one
+    //          First inner loop counts up from one until spaces equals 10 - outer
+    //          Second inner loop counts up from one until stars equals outer
+    //      b.  Print a star or space in each inner loop
     for(outer = 1; outer <= 10; outer++)
     {
-        for(spaces = 1; spaces < outer; spaces++)
+        for(spaces = 1; spaces <= 10 - outer; spaces++)
         {
             putchar(' ');
         }
         
-        for(stars = 1; stars <= 11 - outer; stars++)
+        for(stars = 1; stars <= outer; stars++)
         {
             putchar('*');
         }
         putchar('\n');
     }
+    
+    putchar('\n');
+    
     return 0;
 }
